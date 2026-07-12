@@ -1,15 +1,31 @@
-# Tally — marketing site
+# Privacy & Terms — Kairos Collective Insight LLC
 
-Public site for the Tally iOS app, served via GitHub Pages.
+One-stop repo for the privacy policies (and future terms) of all our apps,
+served via GitHub Pages.
 
-**Live at:** <https://ration12.github.io/Tally-Checklist-and-Counter/>
+**Live at:** <https://ration12.github.io/Privacy-Terms-Documents/>
 
-## Files
+## Structure
 
-- `index.html` — landing page (features, screenshots, pricing)
-- `privacy.html` — privacy policy (App Store submission requires this URL)
+Each app gets its own folder with an `index.html`, so its policy URL is
+stable forever (App Store listings link to these — don't rename folders):
+
+| App | Policy URL |
+| --- | --- |
+| Tally | <https://ration12.github.io/Privacy-Terms-Documents/tally/> |
+| LinkRinse | <https://ration12.github.io/Privacy-Terms-Documents/linkrinse/> |
+
+Other files:
+
+- `index.html` — landing page listing all apps
+- `privacy.html` — legacy redirect to `tally/` (kept so old links never break)
 - `404.html` — themed not-found page
-- `screenshots/` — app screenshots used on the landing page
+
+## Adding a new app
+
+1. Create `<appname>/index.html` with the policy
+2. Add a card for it on the landing page (`index.html`)
+3. Push — GitHub Pages deploys automatically
 
 ## Contact
 

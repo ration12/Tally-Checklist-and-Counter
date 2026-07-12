@@ -3,415 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#30B0A6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1211" media="(prefers-color-scheme: dark)">
-<title>Tally — Checklists and a quick counter for iPhone</title>
-<meta name="description" content="Tally is the simplest way to keep track of anything — checklists you'll actually use, plus a quick counter for the times you just need to tap +1.">
-<meta property="og:title" content="Tally — Checklists and a quick counter for iPhone">
-<meta property="og:description" content="Checklists you'll actually use, plus a quick counter for the times you just need to tap +1.">
+<meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Privacy &amp; Terms — Kairos Collective Insight</title>
+<meta name="description" content="Privacy policies and terms for apps by Kairos Collective Insight LLC.">
+<meta property="og:title" content="Privacy &amp; Terms — Kairos Collective Insight">
+<meta property="og:description" content="Privacy policies and terms for apps by Kairos Collective Insight LLC.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ration12.github.io/Tally-Checklist-and-Counter/">
-<meta property="og:image" content="https://ration12.github.io/Tally-Checklist-and-Counter/screenshots/appicon.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ration12.github.io/Tally-Checklist-and-Counter/screenshots/appicon.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2330B0A6'/%3E%3Cg stroke='white' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='18' y1='20' x2='18' y2='44'/%3E%3Cline x1='27' y1='20' x2='27' y2='44'/%3E%3Cline x1='36' y1='20' x2='36' y2='44'/%3E%3Cline x1='45' y1='20' x2='45' y2='44'/%3E%3Cline x1='14' y1='44' x2='49' y2='20'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:url" content="https://ration12.github.io/Privacy-Terms-Documents/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23444B57'/%3E%3Cpath d='M32 14l14 6v10c0 10-6 17-14 20-8-3-14-10-14-20V20z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
   :root {
-    --bg: #F3F6F5;
+    --bg: #F5F6F8;
     --surface: #FFFFFF;
-    --surface-2: #FAFCFB;
-    --primary: #30B0A6;
-    --primary-tint: #E4F5F3;
-    --text: #1A1D1D;
-    --text-secondary: #6B7472;
-    --text-tertiary: #9AA4A1;
-    --separator: #E6EAE9;
+    --text: #191B1F;
+    --text-secondary: #6A7078;
+    --text-tertiary: #9AA0A8;
+    --separator: #E6E8EC;
+    --tally: #30B0A6;
+    --tally-tint: #E4F5F3;
+    --linkrinse: #3758B0;
+    --linkrinse-tint: #E8EDF9;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0E1211;
-      --surface: #1A201F;
-      --surface-2: #222A28;
-      --primary: #3EC9BD;
-      --primary-tint: #13312D;
-      --text: #F2F5F4;
-      --text-secondary: #8A9491;
-      --text-tertiary: #727C79;
-      --separator: #262E2C;
+      --bg: #101114;
+      --surface: #1B1D22;
+      --text: #F2F3F5;
+      --text-secondary: #8D939C;
+      --text-tertiary: #6E747D;
+      --separator: #272A30;
+      --tally: #3EC9BD;
+      --tally-tint: #13312D;
+      --linkrinse: #7AA3E6;
+      --linkrinse-tint: #1A2440;
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Nav */
-  nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 85%, transparent);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid var(--separator);
+  main {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+    flex: 1;
   }
-  .nav-inner {
-    max-width: 1080px; margin: 0 auto;
-    padding: 14px 24px;
-    display: flex; align-items: center; justify-content: space-between;
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 10px;
   }
-  .brand {
-    display: inline-flex; align-items: center; gap: 10px;
-    text-decoration: none; color: var(--text);
-  }
-  .brand:hover { text-decoration: none; }
-  .brand-mark {
-    width: 32px; height: 32px; background: var(--primary);
-    border-radius: 8px; display: grid; place-items: center;
-  }
-  .brand-mark svg { width: 20px; height: 20px; }
-  .brand-name { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
-  .nav-links { display: flex; gap: 24px; font-size: 14px; }
-  .nav-links a { color: var(--text-secondary); font-weight: 500; }
-  .nav-links a:hover { color: var(--text); text-decoration: none; }
-
-  /* Sections */
-  section { padding: 80px 24px; }
-  .container { max-width: 1080px; margin: 0 auto; }
-  h2 { font-size: 12px; font-weight: 800; color: var(--text-tertiary); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
-
-  /* Hero */
-  .hero {
-    padding-top: 72px; padding-bottom: 40px;
-    text-align: center;
-  }
-  .hero-tile {
-    width: 84px; height: 84px; background: var(--primary);
-    border-radius: 22px; display: inline-grid; place-items: center;
-    margin-bottom: 28px;
-  }
-  .hero-tile svg { width: 48px; height: 48px; }
   h1 {
-    font-size: clamp(40px, 6vw, 64px);
+    font-size: 34px;
     font-weight: 800;
-    letter-spacing: -0.03em;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
-    line-height: 1.05;
-    margin-bottom: 20px;
-    max-width: 780px; margin-left: auto; margin-right: auto;
-  }
-  .hero-sub {
-    font-size: clamp(17px, 2vw, 20px);
-    color: var(--text-secondary);
-    max-width: 560px; margin: 0 auto 32px;
-  }
-  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--primary); color: white;
-    padding: 12px 22px; border-radius: 12px;
-    font-weight: 600; font-size: 15px;
-  }
-  .badge.secondary { background: transparent; color: var(--text); border: 1.5px solid var(--separator); }
-  .badge.coming { background: var(--primary-tint); color: var(--primary); }
-  .coming-note { font-size: 13px; color: var(--text-tertiary); margin-top: -20px; margin-bottom: 60px; }
-
-  /* Hero screenshot */
-  .hero-shot {
-    display: flex; justify-content: center;
-    margin-top: 20px;
-  }
-  .hero-shot img {
-    max-width: 320px; width: 100%;
-    border-radius: 32px;
-    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.25),
-                0 0 0 1px var(--separator);
-  }
-
-  /* Features */
-  .features { padding-top: 100px; padding-bottom: 40px; text-align: center; }
-  .features h3 {
-    font-size: clamp(28px, 4vw, 40px); font-weight: 700;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
     letter-spacing: -0.02em;
-    max-width: 640px; margin: 0 auto 12px;
-    line-height: 1.15;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
-  .features > p {
-    color: var(--text-secondary); max-width: 560px; margin: 0 auto 56px;
-    font-size: 17px;
+  .intro {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 36px;
   }
-  .feature-grid {
-    display: grid; gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--separator);
+    border-radius: 18px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease;
   }
-  .feature {
-    background: var(--surface); border-radius: 20px; padding: 28px;
-    text-align: left;
+  .card:hover { transform: translateY(-2px); }
+  .app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    flex: none;
+    display: grid;
+    place-items: center;
   }
-  .feature-icon {
-    width: 44px; height: 44px; background: var(--primary-tint);
-    border-radius: 12px; display: grid; place-items: center;
-    margin-bottom: 16px;
+  .app-icon.tally { background: var(--tally); }
+  .app-icon.linkrinse { background: #151517; }
+  .card h2 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+  .card p { font-size: 13.5px; color: var(--text-secondary); }
+  .card .go {
+    margin-left: auto;
+    color: var(--text-tertiary);
+    font-size: 18px;
+    flex: none;
   }
-  .feature-icon svg { width: 22px; height: 22px; fill: var(--primary); }
-  .feature h4 {
-    font-size: 18px; font-weight: 600; margin-bottom: 6px;
-    letter-spacing: -0.01em;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
+  .doc-links { display: flex; gap: 10px; margin-top: 4px; }
+  .doc-links span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
   }
-  .feature p { color: var(--text-secondary); font-size: 14.5px; }
-
-  /* Screenshot showcase */
-  .showcase { padding-top: 100px; padding-bottom: 40px; }
-  .showcase-inner {
-    display: grid; gap: 40px; align-items: center;
-    grid-template-columns: 1fr 1fr;
-  }
-  .showcase-inner.reverse { direction: rtl; }
-  .showcase-inner.reverse > * { direction: ltr; }
-  .showcase-copy h3 {
-    font-size: clamp(24px, 3vw, 34px); font-weight: 700;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.15;
-  }
-  .showcase-copy p { color: var(--text-secondary); font-size: 16px; }
-  .showcase-shot { display: flex; justify-content: center; }
-  .showcase-shot img {
-    max-width: 300px; width: 100%; border-radius: 30px;
-    box-shadow: 0 20px 60px -20px rgba(0,0,0,0.2),
-                0 0 0 1px var(--separator);
-  }
-
-  /* Pricing */
-  .pricing { padding-top: 100px; padding-bottom: 40px; text-align: center; }
-  .pricing h3 {
-    font-size: clamp(28px, 4vw, 40px); font-weight: 700;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.02em; margin-bottom: 12px;
-  }
-  .pricing > p {
-    color: var(--text-secondary); max-width: 480px; margin: 0 auto 48px;
-  }
-  .plans {
-    display: grid; gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 720px; margin: 0 auto;
-    text-align: left;
-  }
-  .plan {
-    background: var(--surface); border-radius: 20px; padding: 32px;
-    border: 1.5px solid var(--separator);
-  }
-  .plan.featured {
-    border-color: var(--primary);
-    background: var(--primary-tint);
-  }
-  .plan-name {
-    font-size: 12px; font-weight: 800; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 10px;
-  }
-  .plan.featured .plan-name { color: var(--primary); }
-  .plan-price {
-    font-size: 38px; font-weight: 800; letter-spacing: -0.02em;
-    font-family: -apple-system, "SF Pro Rounded", BlinkMacSystemFont, sans-serif;
-    line-height: 1; margin-bottom: 6px;
-  }
-  .plan-price small { font-size: 15px; font-weight: 500; color: var(--text-secondary); }
-  .plan-tag { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
-  .plan ul { list-style: none; }
-  .plan li {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 8px 0;
-    font-size: 14.5px; color: var(--text);
-  }
-  .plan li svg { flex-shrink: 0; margin-top: 3px; }
-
-  /* Footer */
+  .tag-tally { background: var(--tally-tint); color: var(--tally); }
+  .tag-linkrinse { background: var(--linkrinse-tint); color: var(--linkrinse); }
   footer {
     border-top: 1px solid var(--separator);
-    padding: 40px 24px 48px;
-    color: var(--text-tertiary); font-size: 13px;
+    padding: 20px 24px 32px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-tertiary);
   }
-  .footer-inner {
-    max-width: 1080px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: flex-start;
-    gap: 24px; flex-wrap: wrap;
-  }
-  .footer-left { max-width: 340px; }
-  .footer-left p { margin-top: 8px; }
-  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-  .footer-links a { color: var(--text-secondary); }
-
-  @media (max-width: 720px) {
-    section { padding: 60px 20px; }
-    .hero { padding-top: 48px; }
-    .showcase-inner { grid-template-columns: 1fr; gap: 32px; }
-    .showcase-inner.reverse { direction: ltr; }
-    .nav-links { display: none; }
-  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64"><g stroke="white" stroke-width="5" stroke-linecap="round">
-          <line x1="18" y1="20" x2="18" y2="44"/><line x1="27" y1="20" x2="27" y2="44"/>
-          <line x1="36" y1="20" x2="36" y2="44"/><line x1="45" y1="20" x2="45" y2="44"/>
+<main>
+  <p class="eyebrow">Kairos Collective Insight LLC</p>
+  <h1>Privacy &amp; Terms</h1>
+  <p class="intro">
+    We build small, focused apps that respect your data. Everything each app
+    does stays on your device unless a policy below says otherwise — and none
+    of them do. Pick an app to read its policy.
+  </p>
+
+  <a class="card" href="tally/">
+    <span class="app-icon tally" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="32" height="32">
+        <g stroke="white" stroke-width="5" stroke-linecap="round">
+          <line x1="18" y1="20" x2="18" y2="44"/>
+          <line x1="27" y1="20" x2="27" y2="44"/>
+          <line x1="36" y1="20" x2="36" y2="44"/>
+          <line x1="45" y1="20" x2="45" y2="44"/>
           <line x1="14" y1="44" x2="49" y2="20"/>
-        </g></svg>
-      </span>
-      <span class="brand-name">Tally</span>
-    </a>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-  </div>
-</nav>
+        </g>
+      </svg>
+    </span>
+    <span>
+      <h2>Tally</h2>
+      <p>Checklists and a quick counter for iPhone</p>
+      <span class="doc-links"><span class="tag-tally">Privacy policy</span></span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-tile" aria-hidden="true">
-      <svg viewBox="0 0 64 64"><g stroke="white" stroke-width="5" stroke-linecap="round">
-        <line x1="18" y1="20" x2="18" y2="44"/><line x1="27" y1="20" x2="27" y2="44"/>
-        <line x1="36" y1="20" x2="36" y2="44"/><line x1="45" y1="20" x2="45" y2="44"/>
-        <line x1="14" y1="44" x2="49" y2="20"/>
-      </g></svg>
-    </div>
-    <h1>Checklists you'll actually&nbsp;use.</h1>
-    <p class="hero-sub">Tally is the simplest way to keep track of anything — checklists for the small stuff, and a quick counter for the times you just need to tap +1.</p>
-    <div class="cta-row">
-      <span class="badge coming">Coming soon to iPhone</span>
-    </div>
-    <div class="hero-shot">
-      <img src="screenshots/home.png?v=2" width="320" height="695" alt="Tally home screen showing checklists and a quick-counter tile" fetchpriority="high">
-    </div>
-  </div>
-</section>
-
-<section class="features" id="features">
-  <div class="container">
-    <h3>Small, satisfying, made for how you actually use your phone.</h3>
-    <p>No accounts. No sync setup. Nothing to remember to log at 9pm. Open the app, check the thing off, close the app. Done.</p>
-    <div class="feature-grid">
-
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg></div>
-        <h4>Checklists that feel good to check</h4>
-        <p>Give each list an icon, color, and name. Check items off, watch them slide to the bottom, and get to a satisfying zero.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M11 5v6H5v2h6v6h2v-6h6v-2h-6V5h-2z"/></svg></div>
-        <h4>A quick counter, one tap away</h4>
-        <p>A big +/- counter with a label. Save each run to history. Perfect for reps, sets, cars in a lot, birds in a tree.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17.75 4A5.25 5.25 0 0 1 23 9.25v5.5A5.25 5.25 0 0 1 17.75 20H6.25A5.25 5.25 0 0 1 1 14.75v-5.5A5.25 5.25 0 0 1 6.25 4h11.5zm0 1.5H6.25A3.75 3.75 0 0 0 2.5 9.25v5.5a3.75 3.75 0 0 0 3.75 3.75h11.5a3.75 3.75 0 0 0 3.75-3.75v-5.5a3.75 3.75 0 0 0-3.75-3.75zM10 9.5l6 2.5-6 2.5v-5z"/></svg></div>
-        <h4>Native, offline, private</h4>
-        <p>Built in SwiftUI for iOS 17+. Beautiful in light and dark mode. Everything lives on your device — no accounts, no cloud, no tracking.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="showcase">
-  <div class="container">
-    <div class="showcase-inner">
-      <div class="showcase-copy">
-        <h2>Checklists</h2>
-        <h3>Groceries, habits, workouts, reading lists.</h3>
-        <p>Tap a template or start from scratch. Add items with one finger. Checked items automatically drop to the bottom, so unfinished things stay in your face — where they need to be.</p>
-      </div>
-      <div class="showcase-shot">
-        <img src="screenshots/checklist.png?v=2" alt="A Groceries checklist inside Tally with items being checked off" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="showcase">
-  <div class="container">
-    <div class="showcase-inner reverse">
-      <div class="showcase-copy">
-        <h2>Quick counter</h2>
-        <h3>For the times you just need a number.</h3>
-        <p>Sometimes you're not making a list — you're counting something. Push-ups. Laps. The number of times your coworker says "circle back." Tally has a plain, satisfying counter with a label and a history log, always one tap from the home screen.</p>
-      </div>
-      <div class="showcase-shot">
-        <img src="screenshots/counter.png?v=2" alt="The Tally quick counter with the big number and +/- buttons" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="pricing" id="pricing">
-  <div class="container">
-    <h3>Free. With a $1.99 unlock if you love it.</h3>
-    <p>No subscription. No account. Buy Tally Pro once and it's yours forever, on every iPhone you sign into.</p>
-    <div class="plans">
-
-      <div class="plan">
-        <div class="plan-name">Free</div>
-        <div class="plan-price">$0</div>
-        <div class="plan-tag">Everything you need to get started.</div>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Unlimited checklists and items</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Quick counter with history</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Light and dark mode</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>A small banner ad at the bottom</li>
-        </ul>
-      </div>
-
-      <div class="plan featured">
-        <div class="plan-name">Tally Pro</div>
-        <div class="plan-price">$1.99<small> · one-time</small></div>
-        <div class="plan-tag">Support the app and unlock everything.</div>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Everything in Free</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Remove all ads</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>Home & Lock Screen widgets <em style="opacity:.7">(coming soon)</em></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#30B0A6"><path d="M9 16.17L5.53 12.7a1 1 0 1 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.71a1 1 0 1 0-1.41-1.41L9 16.17z"/></svg>iCloud sync across devices <em style="opacity:.7">(coming soon)</em></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
+  <a class="card" href="linkrinse/">
+    <span class="app-icon linkrinse" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="32" height="32">
+        <g transform="rotate(45 32 30)" fill="none" stroke="#7AA3E6" stroke-width="5">
+          <rect x="14" y="21" width="36" height="18" rx="9"/>
+        </g>
+        <path d="M45 44c3 4 5 7 5 9.5a5 5 0 1 1-10 0c0-2.5 2-5.5 5-9.5z" fill="#7AA3E6"/>
+      </svg>
+    </span>
+    <span>
+      <h2>LinkRinse</h2>
+      <p>The one-second tracking link purifier</p>
+      <span class="doc-links"><span class="tag-linkrinse">Privacy policy</span></span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
+</main>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-left">
-      <a class="brand" href="/">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><g stroke="white" stroke-width="5" stroke-linecap="round">
-            <line x1="18" y1="20" x2="18" y2="44"/><line x1="27" y1="20" x2="27" y2="44"/>
-            <line x1="36" y1="20" x2="36" y2="44"/><line x1="45" y1="20" x2="45" y2="44"/>
-            <line x1="14" y1="44" x2="49" y2="20"/>
-          </g></svg>
-        </span>
-        <span class="brand-name">Tally</span>
-      </a>
-      <p>Made by <strong>Kairos Collective Insight LLC</strong>. &copy; 2026. All rights reserved.</p>
-    </div>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="mailto:karvi_29@yahoo.com">Support</a>
-    </div>
-  </div>
+  Kairos Collective Insight LLC ·
+  <a href="mailto:karvi_29@yahoo.com">karvi_29@yahoo.com</a>
 </footer>
 
 </body>
